@@ -39,6 +39,5 @@ public class Place_Order extends AppCompatActivity {
                 Toast.makeText(Place_Order.this,"Order Placed!",Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 }
