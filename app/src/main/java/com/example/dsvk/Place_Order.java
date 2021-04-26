@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Place_Order extends AppCompatActivity {
     EditText show_price;
@@ -34,6 +35,8 @@ public class Place_Order extends AppCompatActivity {
                     get_address.requestFocus();
                     return ;
                 }
+
+                Toast.makeText(Place_Order.this,"Order Placed!",Toast.LENGTH_SHORT).show();
             }
         });
 
