@@ -1,10 +1,14 @@
 package com.example.dsvk;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -19,6 +23,11 @@ import com.bumptech.glide.Glide;
 import com.example.dsvk.Food;
 
 import java.util.ArrayList;
+
+import kotlin.Suppress;
+
+import static com.example.dsvk.DishActivity.FOOD_ID_KEY;
+
 
 public class MenuRecyclerViewAdapter extends RecyclerView.Adapter<MenuRecyclerViewAdapter.ViewHolder>{
 
@@ -52,11 +61,16 @@ public class MenuRecyclerViewAdapter extends RecyclerView.Adapter<MenuRecyclerVi
             @Override
             public void onClick(View v) {
                 Toast.makeText(mContext, foods.get(position).getName()+ " Selected", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(mContext, DishActivity.class);
+                intent.putExtra(FOOD_ID_KEY,foods.get(position).getId());
+
+                mContext.startActivity(intent);
             }
         });
 
         holder.txtDescription.setText(foods.get(position).getDesc());
         holder.pricetext.setText(foods.get(position).getPrice());
+        holder.quantity.setText(foods.get(position).getQuantity());
         if(foods.get(position).isExpanded()) {
             TransitionManager.beginDelayedTransition(holder.parent);
             holder.expandedRelLayout.setVisibility(View.VISIBLE);
@@ -89,6 +103,7 @@ public class MenuRecyclerViewAdapter extends RecyclerView.Adapter<MenuRecyclerVi
         private ImageView downArrow, upArrow;
         private RelativeLayout expandedRelLayout;
         private TextView txtDescription, pricetext;
+        private TextView quantity;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -100,6 +115,8 @@ public class MenuRecyclerViewAdapter extends RecyclerView.Adapter<MenuRecyclerVi
             expandedRelLayout = itemView.findViewById(R.id.expandedRelLayout);
             txtDescription = itemView.findViewById(R.id.txtDescription);
             pricetext = itemView.findViewById(R.id.pricetext);
+            quantity = itemView.findViewById(R.id.quantity);
+
 
             downArrow.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -121,4 +138,6 @@ public class MenuRecyclerViewAdapter extends RecyclerView.Adapter<MenuRecyclerVi
 
         }
     }
+
+
 }

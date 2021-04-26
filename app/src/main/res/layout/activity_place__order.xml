@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Place_Order">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="PLACE ORDER"
+        android:textSize="20dp"
+        android:id="@+id/place"
+        android:textStyle="bold"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Price : "
+        android:layout_below="@+id/place"
+        android:textSize="30dp"
+        android:textColor="#E53935"
+        android:id="@+id/tot"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/tot"
+        android:layout_below="@+id/place"
+        android:textSize="30dp"
+        android:textColor="#151515"
+        android:id="@+id/totvalue"/>
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tot"
+        android:id="@+id/rad">
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Cash on delivery"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tot"
+        android:id="@+id/cod"
+        android:layout_marginBottom="20dp"
+        android:textSize="20dp"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Online Payment"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/cod"
+        android:id="@+id/op"
+        android:layout_marginBottom="20dp"
+        android:textSize="20dp"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your address"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/rad"
+        android:id="@+id/address"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="40dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/address"
+        android:hint="Address"
+        android:id="@+id/useraddress"
+        android:layout_marginTop="30dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/useraddress"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/finalorder"
+        android:text="Order"/>
+
+</RelativeLayout>

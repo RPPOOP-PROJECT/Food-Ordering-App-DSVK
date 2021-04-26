@@ -33,13 +33,30 @@ public class HomePage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        btnFavourites.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePage.this, FavouriteFood.class);
+                startActivity(intent);
+
+            }
+        });
+
+        btnOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePage.this, CartFood.class);
+                startActivity(intent);
+
+            }
+        });
 
     }
     private void initViews(){
         btnMenu = findViewById(R.id.btnMenu);
         btnFavourites = findViewById(R.id.btnFavourites);
         btnOrder = findViewById(R.id.btnOrder);
-        btnWishlist = findViewById(R.id.btnWishlist);
+        //btnWishlist = findViewById(R.id.btnWishlist);
         btnAbout = findViewById(R.id.btnAbout);
     }
 }

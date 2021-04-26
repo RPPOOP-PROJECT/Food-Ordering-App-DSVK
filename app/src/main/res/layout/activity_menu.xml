@@ -5,14 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MenuActivity"
-    android:background="@drawable/foodframe">
+    android:background="@drawable/bg1">
+
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/menuRecView"
         android:layout_width="wrap_content"
+        android:layout_marginTop="600dp"
         android:layout_height="match_parent"
         android:layout_margin="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="1dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GO TO FAVOURITES"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/order"
+        android:background="#EA2020"
+        app:layout_constraintVertical_bias="0.885" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

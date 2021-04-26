@@ -35,7 +35,6 @@ public class Register extends AppCompatActivity{
     Button generateOTP, logo, verifyOTPBtn;
     private String verificationId;
     EditText phNum , enteredOTP ;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +47,6 @@ public class Register extends AppCompatActivity{
         phNum = (EditText)findViewById(R.id.phoneNumber);
         enteredOTP = (EditText)findViewById(R.id.verifyOTP);
         verifyOTPBtn = (Button)findViewById(R.id.verifyBtn);
-
 
 
         generateOTP.setOnClickListener(new View.OnClickListener() {
@@ -65,6 +63,7 @@ public class Register extends AppCompatActivity{
                     // send OTP method for getting OTP from Firebase.
                     String phone = "+91" + phNum.getText().toString();
                     sendVerificationCode(phone);
+
                 }
             }
         });
@@ -110,6 +109,8 @@ public class Register extends AppCompatActivity{
     private void sendVerificationCode(String number) {
         // this method is used for getting
         // OTP on user phone number.
+
+
         PhoneAuthOptions options =
                 PhoneAuthOptions.newBuilder(mAuth)
                         .setPhoneNumber(number)       // Phone number to verify
@@ -171,6 +172,7 @@ public class Register extends AppCompatActivity{
     };
 
     private void verifyCode(String code) {
+
         // below line is used for getting getting
         // credentials from our verification id and code.
         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, code);

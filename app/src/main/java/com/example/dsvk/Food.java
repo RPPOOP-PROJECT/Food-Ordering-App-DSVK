@@ -9,22 +9,16 @@ public class Food {
     private String imageUrl;
     private String desc;
     private boolean isExpanded;
+    private String quantity;
 
-    public Food(int id, String name, String price, String imageUrl, String desc) {
+    public Food(int id, String name, String price, String imageUrl, String desc, boolean isExpanded, String quantity) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.imageUrl = imageUrl;
         this.desc = desc;
-        isExpanded = false;
-    }
-
-    public boolean isExpanded() {
-        return isExpanded;
-    }
-
-    public void setExpanded(boolean expanded) {
-        isExpanded = expanded;
+        this.isExpanded = isExpanded;
+        this.quantity = quantity;
     }
 
     public int getId() {
@@ -67,7 +61,22 @@ public class Food {
         this.desc = desc;
     }
 
-    @Override
+    public boolean isExpanded() {
+        return isExpanded;
+    }
+
+    public void setExpanded(boolean expanded) {
+        isExpanded = expanded;
+    }
+
+    public String getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
+    }
+
     public String toString() {
         return "Food{" +
                 "id=" + id +
@@ -75,6 +84,9 @@ public class Food {
                 ", price='" + price + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
                 ", desc='" + desc + '\'' +
+                ", isExpanded=" + isExpanded +
+                ", quantity='" + quantity + '\'' +
                 '}';
     }
+
 }

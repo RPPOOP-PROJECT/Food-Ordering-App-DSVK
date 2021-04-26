@@ -27,7 +27,7 @@ public class Login extends AppCompatActivity {
     EditText email,password;
     Button login;
     Button sendEmial;
-    TextView signup,forgotpwd;
+    TextView signup;//,forgotpwd;
     FirebaseAuth mAuth;
     //  private DatabaseReference mDatabase;
 
@@ -43,7 +43,7 @@ public class Login extends AppCompatActivity {
         password = findViewById(R.id.password);
         login = findViewById(R.id.login);
         signup = findViewById(R.id.signup);
-        forgotpwd = findViewById(R.id.forgot);
+        //forgotpwd = findViewById(R.id.forgot);
         sendEmial = findViewById(R.id.send);
 
         //  mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -56,18 +56,18 @@ public class Login extends AppCompatActivity {
 
             }
         });
-        forgotpwd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
-                ViewGroup viewGroup = findViewById(android.R.id.content);
-                View dialogView = LayoutInflater.from(v.getContext()).inflate(R.layout.customview, viewGroup, false);
-                builder.setView(dialogView);
-                AlertDialog alertDialog = builder.create();
-                alertDialog.show();
-
-            }
-        });
+//        forgotpwd.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                AlertDialog.Builder builder = new AlertDialog.Builder(Login.this);
+//                ViewGroup viewGroup = findViewById(android.R.id.content);
+//                View dialogView = LayoutInflater.from(v.getContext()).inflate(R.layout.customview, viewGroup, false);
+//                builder.setView(dialogView);
+//                AlertDialog alertDialog = builder.create();
+//                alertDialog.show();
+//
+//            }
+//        });
         //sendEmial.setOnClickListener(new View.OnClickListener() {
           //  @Override
             //public void onClick(View v) {

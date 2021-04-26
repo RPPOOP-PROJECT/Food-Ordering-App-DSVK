@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.google.android.material.card.MaterialCardView android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <!-- Media -->
+
+
+        <ImageView
+            android:id="@+id/imageIndi"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_foreground" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageIndi"
+
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <TextView
+                android:id="@+id/nameIndi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dish Name"
+                android:textAppearance="?attr/textAppearanceHeadline6" />
+
+            <!-- Title, secondary and supporting text -->
+            <TextView
+                android:id="@+id/priceIndi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nameIndi"
+                android:text="Price"
+                android:textAppearance="?attr/textAppearanceHeadline6" />
+
+            <TextView
+                android:id="@+id/quanLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/priceIndi"
+                android:layout_marginTop="8dp"
+                android:text="Quantity:  "
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary" />
+
+
+            <TextView
+                android:id="@+id/quanIndi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/priceIndi"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="7dp"
+                android:layout_toRightOf="@+id/quanLabel"
+                android:text="Quantity"
+                android:textAppearance="?attr/textAppearanceBody2"
+
+                android:textColor="#DC1A1A"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totalLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/quanIndi"
+                android:layout_marginTop="12dp"
+                android:text="Total Price :  "
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?android:attr/textColorSecondary" />
+
+
+            <TextView
+                android:id="@+id/totalIndi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/quanIndi"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/totalLabel"
+                android:gravity="center_horizontal"
+                android:text="Total Price "
+                android:textAppearance="?attr/textAppearanceBody2"
+
+                android:textColor="#DC1A1A"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/orda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+
+        </RelativeLayout>
+
+
+        <!-- Buttons -->
+
+
+
+
+    </LinearLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>
+

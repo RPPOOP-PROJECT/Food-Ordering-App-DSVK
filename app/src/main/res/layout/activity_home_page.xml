@@ -4,37 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/bg">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="300dp"
         android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/logo" />
+        app:srcCompat="@drawable/logo1" />
 
     <Button
         android:id="@+id/btnMenu"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
+        android:background="#3949AB"
         android:text="Menu"
+        app:backgroundTint="#E53935"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <Button
-        android:id="@+id/btnWishlist"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="Wishlist"
-        app:layout_constraintEnd_toEndOf="@+id/btnMenu"
-        app:layout_constraintStart_toStartOf="@+id/btnMenu"
-        app:layout_constraintTop_toBottomOf="@+id/btnMenu" />
 
     <Button
         android:id="@+id/btnOrder"
@@ -42,9 +36,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:text="Ordered"
-        app:layout_constraintEnd_toEndOf="@+id/btnWishlist"
-        app:layout_constraintStart_toStartOf="@+id/btnWishlist"
-        app:layout_constraintTop_toBottomOf="@+id/btnWishlist" />
+        app:backgroundTint="#FFB300"
+        app:layout_constraintEnd_toEndOf="@+id/btnMenu"
+        app:layout_constraintStart_toStartOf="@+id/btnMenu"
+        app:layout_constraintTop_toBottomOf="@+id/btnMenu" />
 
     <Button
         android:id="@+id/btnFavourites"
@@ -52,6 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:text="Favourites"
+        app:backgroundTint="#039BE5"
         app:layout_constraintEnd_toEndOf="@+id/btnOrder"
         app:layout_constraintStart_toStartOf="@+id/btnOrder"
         app:layout_constraintTop_toBottomOf="@+id/btnOrder" />
@@ -62,6 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:text="About"
+        app:backgroundTint="#43A047"
         app:layout_constraintEnd_toEndOf="@+id/btnFavourites"
         app:layout_constraintStart_toStartOf="@+id/btnFavourites"
         app:layout_constraintTop_toBottomOf="@+id/btnFavourites" />
