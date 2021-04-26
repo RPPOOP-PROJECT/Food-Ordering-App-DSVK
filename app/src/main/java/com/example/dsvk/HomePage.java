@@ -11,7 +11,6 @@ public class HomePage extends AppCompatActivity {
 
     private Button btnMenu, btnWishlist, btnOrder, btnFavourites,btnAbout;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
