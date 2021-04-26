@@ -21,6 +21,5 @@ public class About extends AppCompatActivity {
                 startActivity(new Intent(About.this,HomePage.class));
             }
         });
-
     }
 }
